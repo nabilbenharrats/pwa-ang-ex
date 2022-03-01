@@ -1,3 +1,16 @@
-<mat-toolbar color="primary">
-  <span>Mes tâches</span>
-</mat-toolbar>
+<div class="nav_container">
+  <h3 style="color :rgb(4, 7, 58)">Convertisseur d'unité de mesure Temperature & Distance </h3>
+  <nav mat-tab-nav-bar style=" backgroundColor : rgba(255, 0, 0, 0.513) " [tabPanel]="tabPanel">
+
+
+    <a mat-tab-link routerLinkActive #rla="routerLinkActive" [active]="rla.isActive"
+      routerLink="/temperature">Temperature</a>
+
+    <a mat-tab-link routerLinkActive #rla="routerLinkActive" [active]="rla.isActive" routerLink="/distance">Distance</a>
+
+
+  </nav>
+  <mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+  </mat-tab-nav-panel>
+</div>
